@@ -61,7 +61,8 @@
         else.</small>
     </div>
     
-  <button type="submit"name="submit" class="btn btn-success btn-block ">Save Changes</button>
+    <a href="viewrecords.php" class="btn btn-default ">Back To List</a>
+    <button type="submit"name="submit" class="btn btn-success ">Save Changes</button>
 </form>
   <?php } ?>
 
