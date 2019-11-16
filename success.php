@@ -15,7 +15,7 @@
                 // call function to insert and track
                 $isSuccess = $crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty);
                 $specialtyName = $crud->getSpecialtiesById($specialty);
-                
+                var_dump($isSuccess);
                 if($isSuccess){ 
                         //sendEmail::sendMail($email, 'Welcome to IT Conference 2019', 'You have successfully registered for this year\'s IT Conference');
                         include 'includes/successmessage.php';
