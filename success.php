@@ -1,6 +1,6 @@
 <?php
     $title = 'Success';
-    require_once 'includes/header.php' ;
+    require_once 'includes/header.php';
     require_once 'db/conn.php';
     require_once 'sendemail.php';
     
@@ -16,7 +16,7 @@
                 $isSuccess = $crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty);
                 $specialtyName = $crud->getSpecialtiesById($specialty);
             
-                    if($isSuccess){ 
+                if($isSuccess){ 
                         sendEmail::sendMail($email, 'Welcome to IT Conference 2019', 'You have successfully registered for this year\'s IT Conference');
                         include 'includes/successmessage.php';
                        // echo '<h1 class="text-center text-success"> Congratulations, You Are Now Registered!!</h1>';
