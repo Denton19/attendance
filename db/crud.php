@@ -120,6 +120,23 @@
                     
                 
         }
+                public function getSpecialtiesById($id){
+                    try {
+                        $sql = "SELECT * FROM `specialties` where specialty_id= :id";
+                        $stmt = $this->db->prepare($sql);
+                        $stmt ->bindparam(':id', $id);
+                        $stmt->execute();
+                        $result = $stmt->fetch();
+                        return $result;
+                        //code...
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                        return false; 
+                        //throw $th;
+                    }
+                    
+                
+        }
 
     
     }
